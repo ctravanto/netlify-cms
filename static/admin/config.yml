@@ -1,4 +1,4 @@
-site_url:   https://gilded-sunburst-0982f4.netlify.app/
+site_url: https://gilded-sunburst-0982f4.netlify.app/
 logo_url: https://ntn-boilerplate.netlify.app/icon.png
   
 
@@ -82,3 +82,26 @@ collections:
           summary: '{{fields.image}}',
           field: { label: 'Image', name: 'image', widget: 'image' },
         }
+  - name: 'regions'
+    label: 'Regions'
+    folder: 'content/region'
+    create: true
+    format: 'frontmatter'
+    slug: '{{fields.urlname}}'
+    # editor:
+    #   preview: true
+    fields:
+      - { label: 'Created Date', name: 'createdAt', widget: 'datetime', format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: 'url name', name: 'urlName', widget: 'string', required: true }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Description', name: 'description', widget: 'string', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+      - { label: 'ShowCarousel', name: 'showCarousel', widget: 'boolean', required: true }
+      - {
+        label: 'Gallery',
+        name: 'gallery',
+        widget: 'list',
+        required: false,
+        summary: '{{fields.image}}',
+        field: { label: 'Image', name: 'image', widget: 'image' },
+      }
