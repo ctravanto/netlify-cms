@@ -21,7 +21,7 @@
               alt="winnie-pooh"
               class="image"
               :key="region.gallery[0].id"
-              :src="image"
+              :src="region.gallery[0].id"
           />
         </div>
       </article>
